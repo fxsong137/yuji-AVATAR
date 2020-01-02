@@ -93,3 +93,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+    .el-scrollbar {
+      svg {
+        font-size: 22px;
+        vertical-align: middle !important;
+      }
+    }
+</style>
