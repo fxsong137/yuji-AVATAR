@@ -87,7 +87,33 @@ export const constantRoutes = [
       meta: { title: 'API', icon: 'API' }
     }]
   },
-
+  {
+    path: '/cost',
+    component: Layout,
+    redirect: '/cost/balance',
+    name: 'Cost',
+    meta: { title: '费用', icon: 'feiyong' },
+    children: [
+      {
+        path: 'balance',
+        name: 'Balance',
+        component: () => import('@/views/cost/balance'),
+        meta: { title: '余额', icon: 'table' }
+      },
+      {
+        path: 'order',
+        name: 'Order',
+        component: () => import('@/views/cost/order'),
+        meta: { title: '订单', icon: 'tree' }
+      },
+      {
+        path: 'invoice',
+        name: 'Invoice',
+        component: () => import('@/views/cost/invoice'),
+        meta: { title: '发票', icon: 'tree' }
+      }
+    ]
+  },
  
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
