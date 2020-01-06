@@ -1,13 +1,13 @@
 <template>
-    <div>
-        余额
-    </div>
+  <div>
+    余额
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>
