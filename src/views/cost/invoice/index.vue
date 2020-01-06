@@ -1,6 +1,6 @@
 <template>
     <div>
-        订单
+        发票
     </div>
 </template>
 

@@ -2,12 +2,13 @@
   <div class="sidebar-logo-container" :class="{'collapse':collapse}">
     <transition name="sidebarLogoFade">
       <router-link v-if="collapse" key="collapse" class="sidebar-logo-link" to="/">
-        <img v-if="logo" :src="logo" class="sidebar-logo">
-        <h1 v-else class="sidebar-title">{{ title }} </h1>
+        <svg-icon icon-class="LOGO" />
       </router-link>
       <router-link v-else key="expand" class="sidebar-logo-link" to="/">
-        <img v-if="logo" :src="logo" class="sidebar-logo">
-        <h1 class="sidebar-title">{{ title }} </h1>
+        <!-- <img v-if="logo" :src="logo" class="sidebar-logo">
+        <h1 class="sidebar-title">{{ title }} </h1>-->
+        <svg-icon icon-class="LOGO01" />
+        <!-- <h1 class="sidebar-title">羽迹 AVATAR</h1> -->
       </router-link>
     </transition>
   </div>
@@ -15,7 +16,7 @@
 
 <script>
 export default {
-  name: 'SidebarLogo',
+  name: "SidebarLogo",
   props: {
     collapse: {
       type: Boolean,
@@ -24,13 +25,26 @@ export default {
   },
   data() {
     return {
-      title: 'Vue Admin Template',
-      logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
+      title: "羽迹 AVATAR",
+    };
+  }
+};
+</script>
+<style lang="scss">
+#app .sidebar-logo-container {
+  text-align: left !important;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .svg-icon {
+      height: 32px;
+      width: auto;
+      margin: 0;
     }
   }
 }
-</script>
-
+</style>
 <style lang="scss" scoped>
 .sidebarLogoFade-enter-active {
   transition: opacity 1.5s;

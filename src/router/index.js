@@ -51,7 +51,7 @@ export const constantRoutes = [
       path: 'index',
       name: 'Index',
       component: () => import('@/views/index/index'),
-      meta: { title: '首页', icon: 'dashboard' }
+      meta: { title: '首页', icon: 'home' }
     }]
   },
   {
@@ -104,7 +104,7 @@ export const constantRoutes = [
         path: 'order',
         name: 'Order',
         component: () => import('@/views/cost/order'),
-        meta: { title: '订单', icon: 'tree' }
+        meta: { title: '充值', icon: 'tree' }
       },
       {
         path: 'invoice',
