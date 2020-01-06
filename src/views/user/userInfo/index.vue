@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    详细信息
-=======
   <div class="user-info">
     <el-row type="flex" justify="center">
       <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="2">
@@ -55,16 +51,11 @@
           </div>
       </el-col>
     </el-row>    
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
   </div>
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-
-}
-=======
   name: "UserInfo",
   data() {
     return {
@@ -72,7 +63,6 @@ export default {
     };
   }
 };
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
 </script>
 
 <style lang="scss" scoped>
@@ -100,9 +90,6 @@ export default {
   }
 }
 
-<<<<<<< HEAD
-</style>
-=======
 .input-box {
     display: flex;
     align-items: center;
@@ -140,4 +127,3 @@ export default {
     }
 }
 </style>
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0

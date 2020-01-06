@@ -39,13 +39,7 @@ export const constantRoutes = [
       path: 'index',
       name: 'Index',
       component: () => import('@/views/index/index'),
-<<<<<<< HEAD
-      meta: { title: '首页', icon: 'dashboard' }
-      // title:设置该路由在侧边栏和面包屑中展示的名字
-      // icon:设置该路由的图标
-=======
       meta: { title: '首页', icon: 'home' }
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
     }]
   },
   /* 这里需要注意一下，一般侧边栏有两种形式即：submenu 和 直接 el-menu-item。 一个是嵌套子菜单，另一个则是直接一个链接。如下图：

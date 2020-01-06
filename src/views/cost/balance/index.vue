@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    余额
-  </div>
-=======
     <div class="balance" :style="device == 'mobile'?'margin:10px':'' ">
         <div class="top">
             <div class="right" :style="device == 'mobile'?'left:0;top:0':'' ">
@@ -49,15 +44,10 @@
             </el-tabs>
         </div>
     </div>
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-
-}
-=======
     name: "Balance",
     data() {
         return {
@@ -150,16 +140,12 @@ export default {
         }
     }
 };
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
 </script>
 
 <style lang="scss" scoped>
 .balance {
     margin: 30px;
 
-<<<<<<< HEAD
-</style>
-=======
     .top {
         position: relative;
         .right {
@@ -217,4 +203,3 @@ export default {
     margin-top: 30px;
 }
 </style>
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0

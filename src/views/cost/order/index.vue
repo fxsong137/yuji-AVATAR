@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    订单
-  </div>
-=======
     <div class="order">
         <el-row type="flex" justify="center">
             <el-col :xs="24" :sm="12" :md="18" :lg="16" :xl="12">
@@ -76,15 +71,10 @@
             </el-col>
         </el-row>
     </div>
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-
-}
-=======
     data() {
         return {
             active: 1
@@ -101,7 +91,6 @@ export default {
         }
     }
 };
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
 </script>
 
 <style lang="scss" scoped>
@@ -119,9 +108,6 @@ export default {
             justify-content: space-around;
             align-items: center;
 
-<<<<<<< HEAD
-</style>
-=======
             svg {
                 width: 70px;
                 height: 70px;
@@ -240,4 +226,3 @@ export default {
     }
 }
 </style>
->>>>>>> 7e58f6e87e03da49863e2c673be01615b2b86da0
