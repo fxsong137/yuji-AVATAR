@@ -3,7 +3,7 @@
         <div class="top">
             <div class="select">
                 <div class="s-left">
-                    <div class="optional"  :class="device == 'mobile'?'mobile': ''">
+                    <div class="optional" :class="device == 'mobile'?'mobile': ''">
                         <span>可开票金额：</span>
                         <span>￥{{totalPrice}}</span>
                     </div>
@@ -13,13 +13,21 @@
                     </div>
                 </div>
                 <div class="s-right">
-                    <div class="text">已选择<span>{{selectList.length}}</span>笔账单</div>
+                    <div class="text">
+                        已选择
+                        <span>{{selectList.length}}</span>笔账单
+                    </div>
                     <div class="sure">立即开票</div>
                 </div>
             </div>
         </div>
         <div class="bottom">
-            <el-table :data="tableData" border style="width: 100%"  @selection-change="selectionChange">
+            <el-table
+                :data="tableData"
+                border
+                style="width: 100%"
+                @selection-change="selectionChange"
+            >
                 <el-table-column type="selection" width="55"></el-table-column>
                 <el-table-column prop="order" align="center" label="订单号" width></el-table-column>
                 <el-table-column prop="name" align="center" label="API名称" width></el-table-column>
@@ -43,40 +51,47 @@
                 ></el-pagination>
             </div>
         </div>
+        <MyMarkdown/>
     </div>
 </template>
 
 <script>
+import highligh from '@/highligh'
 export default {
+    components: {
+        MyMarkdown: ()=>import('@/markdown/01.md')
+    },
+    mixins:[highligh],
     data() {
         return {
             tableData: [
                 {
-                    order: 'AWDGREGE123',
-                    name: '人脸计算',
-                    time: '2019-10-20',
-                    num: '20120',
+                    order: "AWDGREGE123",
+                    name: "人脸计算",
+                    time: "2019-10-20",
+                    num: "20120",
                     totalPrice: 2012,
                     price: 0.1
                 },
                 {
-                    order: 'AWDGREGE123',
-                    name: '人脸融合',
-                    time: '2019-07-10',
-                    num: '2012',
+                    order: "AWDGREGE123",
+                    name: "人脸融合",
+                    time: "2019-07-10",
+                    num: "2012",
                     totalPrice: 202,
                     price: 0.1
                 },
                 {
-                    order: 'AWDGREGE123',
-                    name: '人脸计算',
-                    time: '2019-10-20',
-                    num: '20120',
+                    order: "AWDGREGE123",
+                    name: "人脸计算",
+                    time: "2019-10-20",
+                    num: "20120",
                     totalPrice: 2012,
                     price: 1
                 }
             ],
-            selectList: []
+            selectList: [],
+            
         };
     },
     computed: {
@@ -85,23 +100,23 @@ export default {
         },
         selectPrice() {
             var num = 0;
-            this.selectList.forEach(el=>{
-                num += el.totalPrice
-            })
-            return num
+            this.selectList.forEach(el => {
+                num += el.totalPrice;
+            });
+            return num;
         },
         totalPrice() {
             var num = 0;
-            this.tableData.forEach(el=>{
-                num += el.totalPrice
-            })
-            return num
+            this.tableData.forEach(el => {
+                num += el.totalPrice;
+            });
+            return num;
         }
     },
     methods: {
         selectionChange: function(val) {
-            console.log(val)
-            this.selectList = val
+            console.log(val);
+            this.selectList = val;
         }
     }
 };
@@ -126,10 +141,9 @@ export default {
                 flex-direction: column;
                 justify-content: space-around;
                 .optional {
-                    color: #F26342;
+                    color: #f26342;
                     font-weight: bold;
                     font-size: 16px;
-                    
                 }
                 .select-num {
                     font-size: 14px;
@@ -156,7 +170,7 @@ export default {
                     width: 140px;
                     height: 40px;
                     line-height: 40px;
-                    background: #F26342;
+                    background: #f26342;
                     color: #fff;
                     text-align: center;
                     border-radius: 25px;
@@ -174,10 +188,10 @@ export default {
         align-items: center;
         .btn {
             max-width: 90px;
-            height:40px;
+            height: 40px;
             line-height: 40px;
-            background:rgba(156,156,156,1);
-            border-radius:23px;
+            background: rgba(156, 156, 156, 1);
+            border-radius: 23px;
             text-align: center;
             color: #fff;
             flex: 1;
