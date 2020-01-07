@@ -1,13 +1,13 @@
 <template>
     <div>
-        <router-view />
+        申请开票
     </div>
 </template>
 
 <script>
-export default {
-
-}
+    export default {
+        
+    }
 </script>
 
 <style lang="scss" scoped>

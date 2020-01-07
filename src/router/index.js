@@ -129,8 +129,29 @@ export const constantRoutes = [
             {
                 path: 'invoice',
                 name: 'Invoice',
+                redirect: '/cost/invoice/information',
                 component: () => import('@/views/cost/invoice'),
-                meta: { title: '发票', icon: 'tree' }
+                meta: { title: '发票', icon: 'tree' },
+                children: [
+                    {
+                        path: 'information',
+                        name: 'Information',
+                        component: () => import('@/views/cost/invoice/information'),
+                        meta: { title: '信息管理', icon: 'tree' }
+                    },
+                    {
+                        path: 'address',
+                        name: 'Address',
+                        component: () => import('@/views/cost/invoice/address'),
+                        meta: { title: '地址管理', icon: 'tree' }
+                    },
+                    {
+                        path: 'demand',
+                        name: 'Demand',
+                        component: () => import('@/views/cost/invoice/demand'),
+                        meta: { title: '申请开票', icon: 'tree' }
+                    }
+                ]
             }
         ]
     },

@@ -1,13 +1,13 @@
 <template>
     <div>
-        <router-view />
+        信息管理
     </div>
 </template>
 
 <script>
-export default {
-
-}
+    export default {
+        
+    }
 </script>
 
 <style lang="scss" scoped>
